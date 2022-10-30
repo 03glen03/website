@@ -1,6 +1,6 @@
 FROM node:19.0.0-alpine3.16
 WORKDIR /app
-RUN sudo su apk update && sudo su apk add apache2
+RUN npm install http
 copy . .
 EXPOSE 80
 CMD ["node","index.html"]
